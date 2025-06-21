@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Per la mia mami ❤️</title>
+    <style>
+        body {
+            background-color: #fce4ec;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 50px;
+            color: #d81b60;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-top: 100px;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        .heart {
+            font-size: 5em;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 50px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #d81b60;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ad1457;
+        }
+
+        .secret-message {
+            margin-top: 30px;
+            font-size: 1.5em;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="heart">❤️</div>
+    <h1>Ciao mami<3</h1>
+
+    <button class="button" onclick="showMessage()">Clicca qui</button>
+
+    <div class="secret-message" id="secretMessage">
+        Sei la cosa più bella che mi sia mai successa.<br>
+        Voglio solo farti capire quanto sei importante per me e che ti penso sempre.<br>
+        Ti amo! ❤️
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('secretMessage').style.opacity = '1';
+        }
+    </script>
+
+</body>
+</html>
